@@ -1,4 +1,3 @@
 # mytools
-this is my tools
 
-back
+自分用の開発ツール置き場。
