@@ -62,6 +62,15 @@ sup,sub,small,.small{
 strong,.strong{
   @include type_bold;
 }
+//CLEARFIX
+@mixin clearfix{
+  zoom:1;
+  &:after{clear:both;content:".";display:block;height:0;visibility:hidden;}
+}
+.clearfix{
+  @include clearfix;
+}
+
 
 //LAYOUT
 .wrap{
@@ -77,6 +86,9 @@ strong,.strong{
     border-color: $light_grey;
     border-width:0 0 0 4px;
   }
+}
+.nav{
+
 }
 
 ul{
@@ -175,4 +187,39 @@ th{
 .alert{
   background: $red;
   color: $white;
+}
+
+//buttons
+.nav{
+  @include clearfix;
+  padding: $margin 0;
+}
+.btn{
+  @include clearfix;
+  float: left;
+  display: block;
+  margin:$margin / 4;
+  a{
+    transition:all .2s ease ;
+    border-radius: 10px;
+    text-decoration: none;
+    border: solid 1px $light_grey;
+    display: block;
+    float: left;
+    line-height: 20px;
+    height: 20px;
+    padding: 12px;
+  }
+    :before{
+      content: ">";
+      display: block;
+      float: left;
+      line-height: 20px;
+      height: 20px;
+    }
+  &:hover a{
+      background: $light_grey;
+      text-decoration: underline;
+      box-shadow: 0 3px 5px $black;
+  }
 }
