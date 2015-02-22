@@ -5,6 +5,7 @@ var csscomb = require('gulp-csscomb');
 var spritesmith = require('gulp.spritesmith');
 var styledocco = require('gulp-styledocco');
 var connect = require('gulp-connect');
+var plumber = require('gulp-plumber');
 
 gulp.task('styledocco', function () {
   gulp.src('dist/*.css')
@@ -34,8 +35,11 @@ gulp.task('default', function () {
   .pipe(csscomb())
   .pipe(gulp.dest('./dist'));
 });
+
+
 gulp.task('sass', function () {
   gulp.src('src/*.scss')
+  // .pipe(plumber)
   .pipe(sass())
   .pipe(autoprefixer("last 2 version", "ie 8", "ie 7"))
   .pipe(csscomb())

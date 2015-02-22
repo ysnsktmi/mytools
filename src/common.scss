@@ -1,1 +1,178 @@
 @charset "utf-8";
+
+// colors
+$black:#000;
+$white:#fff;
+$grey:#ccc;
+$light_grey:#eee;
+
+$red:#f00;
+// size
+$short:11px;
+$font:16px;
+$venti:36px;
+$grande:24px;
+$tall:20px;
+$margin:20px;
+
+//mixin
+@mixin type_bold{
+  font-weight: 800;
+}
+
+//nomalize
+
+html{
+    font-family:sans-serif;
+    font-size: $font;
+    line-height: 1.6;
+  -webkit-text-size-adjust:100%;
+      -ms-text-size-adjust:100%;
+}
+
+h1{
+  @include type_bold;
+  font-size: $venti;
+}
+h2{
+  @include type_bold;
+  font-size: $grande;
+}
+h3,h4,h5{
+  @include type_bold;
+}
+
+p{
+  vertical-align: baseline;
+  .lead{
+    @include type_bold;
+    font-size: $tall;}
+}
+
+mark,.mark{}
+del,s{
+  text-decoration:line-through;
+}
+int,u{
+  text-decoration: underline;
+}
+sup,sub,small,.small{
+  font-size: $short;
+}
+strong,.strong{
+  @include type_bold;
+}
+
+//LAYOUT
+.wrap{
+  padding: $margin;
+}
+.section{
+  margin-top: $margin;
+  padding: $margin;
+  border: solid 1px $grey;
+  & .section{
+    padding: $margin / 2;
+    margin-top: $margin / 2;
+    border-color: $light_grey;
+    border-width:0 0 0 4px;
+  }
+}
+
+ul{
+  &>li{
+    list-style:inside disc;
+    & li{
+      padding-left: 1em;
+      list-style:inside circle;
+      & li{
+        list-style:inside square;
+      }
+    }
+  }
+  &.list_unstyled>li{
+    list-style: none;
+  }
+  &.list_inline>li{
+    display: inline-block;
+  }
+}
+
+dl{
+  &.dl_holizontal{}
+}
+
+//table
+table{
+  border-collapse: collapse;
+  &.table{
+    width: 100%;
+  }
+  &.striped tr:nth-of-type(2n) td{
+    background-color: $light_grey;
+  }
+}
+tr{
+  border:solid 1px $grey;
+  border-width: 1px 0 0;
+  &:last-of-type{
+    border-bottom-width:1px;
+  }
+  :first-child{
+    border-left-width: 0;
+  }
+}
+td,th{
+  padding: 5px;
+  border:solid 1px $grey;
+  border-width: 0 0 0 1px;
+}
+
+th{
+  @include type_bold;
+}
+
+//float
+.pull_left{
+  display: block;
+  float: left;
+}
+.pull_right{
+  display: block;
+  float: right;
+}
+.center-block{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+//visibility
+.show{
+  display: block;//issue:インライン要素に対応
+}
+.hidden{
+  display: none;
+}
+.invisible{
+  visibility: hidden;
+}
+
+
+//TYPE
+.text_bold{
+  @include type_bold;
+}
+.text_left{
+  text-align: left;
+}
+.text_center{
+  text-align: center;
+} 
+.text_right{
+  text-align: right;
+}
+.alert{
+  background: $red;
+  color: $white;
+}
