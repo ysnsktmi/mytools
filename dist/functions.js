@@ -2,6 +2,11 @@ $(function(){
 
   var head=document.getElementsByTagName('head')[0];;
 
+  //console.log shorthand
+  function cl(o){
+    console.log(o);
+  }
+
   //indexOf for Lagecy Browser
   if (!Array.prototype.indexOf) {
     Array.prototype.indexOf=function(target,index){
@@ -33,5 +38,37 @@ $(function(){
     css.href=url;
     head.appendChild(css);
   }
+
+  //smoothscroll
+  $('a[href^="#"]').on('click',function(e){
+    e.preventDefault();
+    smoothscroll($(this).attr('href'));
+  });
+  function smoothscroll(target){
+    var to=$(target).offset().top;
+    $('html').animate({
+      scrollTop:to
+    },300);
+    return to;
+  }
+
+  //scheme
+  $('#colorscheme span').each(function(){
+    var rgb=$(this).css('background-color').replace(/rgb\(/g,'');
+      obj={
+        r:parseInt(rgb.split(',')[0]),
+        g:parseInt(rgb.split(',')[1]),
+        b:parseInt(rgb.split(',')[2])
+      };
+    function componentToHex(c) {
+      var hex = c.toString(16);
+      return hex.length == 1 ? "0" + hex : hex;
+    }
+    function rgbToHex(r, g, b) {
+      return '#'+componentToHex(r) + componentToHex(g) + componentToHex(b);
+    }
+    $(this).empty().append(rgbToHex(obj.r,obj.g,obj.b));
+  })
+
 
 })//jquery

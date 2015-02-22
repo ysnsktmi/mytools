@@ -4,9 +4,10 @@
 $black:#000;
 $white:#fff;
 $grey:#ccc;
-$light_grey:#eee;
-
-$red:#f00;
+$light_grey:#e6f3ff;
+$red:#ff1b60;
+$blue:#2b99ff;
+$light_blue:#81c3fe;
 // size
 $short:11px;
 $font:16px;
@@ -26,8 +27,8 @@ html{
     font-family:sans-serif;
     font-size: $font;
     line-height: 1.6;
-  -webkit-text-size-adjust:100%;
-      -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+        -ms-text-size-adjust:100%;
 }
 
 h1{
@@ -185,6 +186,7 @@ th{
   text-align: right;
 }
 .alert{
+  padding: $margin / 2;
   background: $red;
   color: $white;
 }
@@ -198,28 +200,46 @@ th{
   @include clearfix;
   float: left;
   display: block;
-  margin:$margin / 4;
+  margin-left:$margin / 4;
   a{
+    color: $white;
     transition:all .2s ease ;
-    border-radius: 10px;
+    border-radius: 4px;
+    background: $light_blue;
     text-decoration: none;
-    border: solid 1px $light_grey;
     display: block;
     float: left;
     line-height: 20px;
     height: 20px;
     padding: 12px;
+    box-shadow: 0 0 3px $grey;
   }
-    :before{
-      content: ">";
-      display: block;
-      float: left;
-      line-height: 20px;
-      height: 20px;
-    }
+  :before{
+    content: ">";
+    display: block;
+    float: left;
+    line-height: 20px;
+    height: 20px;
+  }
   &:hover a{
-      background: $light_grey;
-      text-decoration: underline;
-      box-shadow: 0 3px 5px $black;
+    color: $white;
+    background: $blue;
+    box-shadow: 0 3px 5px $grey;
+  }
+  .btn_group &:nth-of-type(1) a{
+    border-radius: 4px 0 0 4px;
+    border-right-width: 0;
+  }
+  .btn_group &:last-of-type a{
+    border-radius: 0 4px 4px 0;
+    border-right-width: 0;
+  }
+  .btn_group &{
+    margin-left: 0;
+    a{
+      border-radius: 0;
+      border-right-width: 0;
+      border-left-width: 0;
+    }
   }
 }

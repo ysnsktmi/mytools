@@ -1,0 +1,317 @@
+@charset "utf-8";
+
+$color_thunderbird_approx: #c02020;
+$color_forget_me_not_approx: #fff0f0;
+$color_crusta_approx: #ff7a31;
+$color_mine_shaft_approx: #333333;
+$color_jewel_approx: #207040;
+$color_electric_violet_approx: #6600ff;
+$color_mondo_approx: #483e2d;
+$gray: #808080;
+$blue: #0000ff;
+$color_bon_jour_approx: #e0e0e0;
+$color_celeste_approx: #cccccc;
+$color_putty_approx: #dcd083;
+$color_half_and_half_approx: #ffffdf;
+$silver: #c0c0c0;
+$color_black_haze_approx: #f7f7f4;
+$color_storm_dust_approx: #666;
+$color_denim_approx: #1b72bc;
+$color_vida_loca_approx: #577e00;
+$color_apple_approx: #4d9b35;
+$mercury: #e5e5e5;
+$color_athens_gray_approx: #ecf1f0;
+$color_tuatara_approx: #363636;
+$color_gray_approx: #7f7f7f;
+$persian_red: #c33;
+$color_mercury_approx: #e4e4e4;
+$color_mountain_mist_approx: #979797;
+$color_emperor_approx: #4d4d4d;
+$color_quill_gray_approx: #d2d2d2;
+$color_olive_drab_approx: #649333;
+$color_fuscous_gray_approx: #555;
+$color_scarlet_approx: #ff3709;
+$gallery: #efefef;
+$color_bright_turquoise_approx: #00ccff;
+$color_carnation_pink_approx: #ff99cc;
+$color_tundora_approx: #444444;
+$red: #ff0000;
+$color_breaker_bay_approx: #62a1a3;
+$color_iron_approx: #d8d8d8;
+$color_carnation_approx: #f46060;
+$color_pink_approx: #fcc;
+$color_drover_approx: #fcf6b3;
+$color_dodger_blue_approx: #157df2;
+$color_sorbus_approx: #fb7b09;
+$color_japanese_laurel_approx: #090;
+$color_scooter_approx: #3dc8dd;
+$color_twilight_blue_approx: #effffe;
+$color_brilliant_rose_approx: #f649b4;
+$color_gray_nickel_approx: #c2c2ba;
+$color_razzmatazz_approx: #df1a72;
+$color_flamingo_approx: #eb5f31;
+$color_sea_pink_approx: #f599a0;
+$web_orange: orange;
+
+
+$bg_color:#f7f7f4;
+$bg_gray:#e4e4e4;
+$green_primary:#518000;
+$green_secondary:#7fab00;
+$hover_cream:#ffffcd;
+$border_blue:#007e8d;
+$link:#1473bd;
+$black:#333333;
+$semi_black:#4d4d4d;
+
+
+$margin:10px;
+
+@mixin cschemebox{
+  padding: $margin / 2;
+  border-radius:$margin;
+  display: block;
+  // float:left;
+  margin: 10px 0 0 10px;
+}
+
+.color_thunderbird_approx{
+  background-color:$color_thunderbird_approx;
+  @include cschemebox;
+}
+.color_forget_me_not_approx{
+  background-color:$color_forget_me_not_approx;
+  @include cschemebox;
+}
+.color_crusta_approx{
+  background-color:$color_crusta_approx;
+  @include cschemebox;
+}
+.color_mine_shaft_approx{
+  background-color:$color_mine_shaft_approx;
+  @include cschemebox;
+}
+.color_jewel_approx{
+  background-color:$color_jewel_approx;
+  @include cschemebox;
+}
+.color_electric_violet_approx{
+  background-color:$color_electric_violet_approx;
+  @include cschemebox;
+}
+.color_mondo_approx{
+  background-color:$color_mondo_approx;
+  @include cschemebox;
+}
+.gray{
+  background-color:$gray;
+  @include cschemebox;
+}
+.blue{
+  background-color:$blue;
+  @include cschemebox;
+}
+.color_bon_jour_approx{
+  background-color:$color_bon_jour_approx;
+  @include cschemebox;
+}
+.color_celeste_approx{
+  background-color:$color_celeste_approx;
+  @include cschemebox;
+}
+.color_putty_approx{
+  background-color:$color_putty_approx;
+  @include cschemebox;
+}
+.color_half_and_half_approx{
+  background-color:$color_half_and_half_approx;
+  @include cschemebox;
+}
+.silver{
+  background-color:$silver;
+  @include cschemebox;
+}
+.color_black_haze_approx{
+  background-color:$color_black_haze_approx;
+  @include cschemebox;
+}
+.color_storm_dust_approx{
+  background-color:$color_storm_dust_approx;
+  @include cschemebox;
+}
+.color_denim_approx{
+  background-color:$color_denim_approx;
+  @include cschemebox;
+}
+.color_vida_loca_approx{
+  background-color:$color_vida_loca_approx;
+  @include cschemebox;
+}
+.color_apple_approx{
+  background-color:$color_apple_approx;
+  @include cschemebox;
+}
+.mercury{
+  background-color:$mercury;
+  @include cschemebox;
+}
+.color_athens_gray_approx{
+  background-color:$color_athens_gray_approx;
+  @include cschemebox;
+}
+.color_tuatara_approx{
+  background-color:$color_tuatara_approx;
+  @include cschemebox;
+}
+.color_gray_approx{
+  background-color:$color_gray_approx;
+  @include cschemebox;
+}
+.persian_red{
+  background-color:$persian_red;
+  @include cschemebox;
+}
+.color_mercury_approx{
+  background-color:$color_mercury_approx;
+  @include cschemebox;
+}
+.color_mountain_mist_approx{
+  background-color:$color_mountain_mist_approx;
+  @include cschemebox;
+}
+.color_emperor_approx{
+  background-color:$color_emperor_approx;
+  @include cschemebox;
+}
+.color_quill_gray_approx{
+  background-color:$color_quill_gray_approx;
+  @include cschemebox;
+}
+.color_olive_drab_approx{
+  background-color:$color_olive_drab_approx;
+  @include cschemebox;
+}
+.color_fuscous_gray_approx{
+  background-color:$color_fuscous_gray_approx;
+  @include cschemebox;
+}
+.color_scarlet_approx{
+  background-color:$color_scarlet_approx;
+  @include cschemebox;
+}
+.gallery{
+  background-color:$gallery;
+  @include cschemebox;
+}
+.color_bright_turquoise_approx{
+  background-color:$color_bright_turquoise_approx;
+  @include cschemebox;
+}
+.color_carnation_pink_approx{
+  background-color:$color_carnation_pink_approx;
+  @include cschemebox;
+}
+.color_tundora_approx{
+  background-color:$color_tundora_approx;
+  @include cschemebox;
+}
+.red{
+  background-color:$red;
+  @include cschemebox;
+}
+.color_breaker_bay_approx{
+  background-color:$color_breaker_bay_approx;
+  @include cschemebox;
+}
+.color_iron_approx{
+  background-color:$color_iron_approx;
+  @include cschemebox;
+}
+.color_carnation_approx{
+  background-color:$color_carnation_approx;
+  @include cschemebox;
+}
+.color_pink_approx{
+  background-color:$color_pink_approx;
+  @include cschemebox;
+}
+.color_drover_approx{
+  background-color:$color_drover_approx;
+  @include cschemebox;
+}
+.color_dodger_blue_approx{
+  background-color:$color_dodger_blue_approx;
+  @include cschemebox;
+}
+.color_sorbus_approx{
+  background-color:$color_sorbus_approx;
+  @include cschemebox;
+}
+.color_japanese_laurel_approx{
+  background-color:$color_japanese_laurel_approx;
+  @include cschemebox;
+}
+.color_scooter_approx{
+  background-color:$color_scooter_approx;
+  @include cschemebox;
+}
+.color_twilight_blue_approx{
+  background-color:$color_twilight_blue_approx;
+  @include cschemebox;
+}
+.color_brilliant_rose_approx{
+  background-color:$color_brilliant_rose_approx;
+  @include cschemebox;
+}
+.color_gray_nickel_approx{
+  background-color:$color_gray_nickel_approx;
+  @include cschemebox;
+}
+.color_razzmatazz_approx{
+  background-color:$color_razzmatazz_approx;
+  @include cschemebox;
+}
+.color_flamingo_approx{
+  background-color:$color_flamingo_approx;
+  @include cschemebox;
+}
+.color_sea_pink_approx{
+  background-color:$color_sea_pink_approx;
+  @include cschemebox;
+}
+.web_orange{
+  background-color:$web_orange;
+  @include cschemebox;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

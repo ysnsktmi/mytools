@@ -59,7 +59,7 @@ strong,
   margin-top:20px;
   padding:20px;}
 .section .section{
-  border-color:#eee;
+  border-color:#e6f3ff;
   border-width:0 0 0 4px; 
   margin-top:10px;
   padding:10px;}
@@ -81,7 +81,7 @@ table{
 table.table{
   width:100%;}
 table.striped tr:nth-of-type(2n) td{
-  background-color:#eee;}
+  background-color:#e6f3ff;}
 
 tr{
   border:solid 1px #ccc;
@@ -135,8 +135,9 @@ th{
   text-align:right;}
 
 .alert{
-  background:#f00;
-  color:#fff;}
+  background:#ff1b60;
+  color:#fff; 
+  padding:10px;}
 
 .nav{
   padding:20px 0; 
@@ -151,7 +152,7 @@ th{
 .btn{
   display:block;
   float:left;
-  margin:5px; 
+  margin-left:5px; 
   zoom:1;}
 .btn:after{
   clear:both;
@@ -160,13 +161,15 @@ th{
   height:0;
   visibility:hidden;}
 .btn a{
-  border:solid 1px #eee;
-  border-radius:10px;
+  background:#81c3fe;
+  border-radius:4px;
+  box-shadow:0 0 3px #ccc; 
+  color:#fff;
   display:block;
   float:left;
   height:20px;
   line-height:20px;
-  padding:12px; 
+  padding:12px;
   text-decoration:none;
   -webkit-transition:all .2s ease;
           transition:all .2s ease;}
@@ -177,6 +180,18 @@ th{
   height:20px; 
   line-height:20px;}
 .btn:hover a{
-  background:#eee;
-  box-shadow:0 3px 5px #000; 
-  text-decoration:underline;}
+  background:#2b99ff;
+  box-shadow:0 3px 5px #ccc; 
+  color:#fff;}
+.btn_group .btn:nth-of-type(1) a{
+  border-radius:4px 0 0 4px;
+  border-right-width:0;}
+.btn_group .btn:last-of-type a{
+  border-radius:0 4px 4px 0;
+  border-right-width:0;}
+.btn_group .btn{
+  margin-left:0;}
+.btn_group .btn a{
+  border-left-width:0; 
+  border-radius:0;
+  border-right-width:0;}
