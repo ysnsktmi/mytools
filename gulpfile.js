@@ -13,6 +13,14 @@ gulp.task('styledocco', function () {
       name: 'styleguide'
     }));
 });
+
+gulp.task('srccss',function(){
+  gulp.src('src/*.css')
+  .pipe(csscomb())
+  .pipe(autoprefixer("last 2 version", "ie 8", "ie 7"))
+  .pipe(gulp.dest('./dist'));
+});
+
 gulp.task('styles', function() {
   return gulp.src('src/styles/main.css')
     .pipe(csscomb())
