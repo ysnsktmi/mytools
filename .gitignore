@@ -1,4 +1,7 @@
 /node_modules
 /livecoding
 /src/normalize.css
+/src/site.css
+/src/site.scss
+/dist/site.css
 
